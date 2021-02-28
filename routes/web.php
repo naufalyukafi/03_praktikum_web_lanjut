@@ -27,9 +27,7 @@ Route::prefix('program') -> group(function() {
 
 Route::get('/about-us', [HomeController::class, 'about']);
 
-// Route::resource('/contact-us', ContactUsController::class, ['only' => ['index']]);
-// Route::resource('/admin', ContactUsController::class, ['only' => ['store']]);
 Route::resource('/contact-us', ContactUsController::class)->only(['index']);
-
+Route::resource('/admin', ContactUsController::class)->only(['store']);
 
 

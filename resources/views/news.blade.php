@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>News</title>
-</head>
-<body>
-    <h1>Halaman News</h1>
-    <h3>Title: {{$title}}</h3>
+@section('title')
+	News | Yukafi
+@endsection
+@extends('layouts.app')
+
+@section('content')
+    <h2 class="text-center mt-4">Halaman Berita</h1>
+    <h3 class="text-center mt-4">Judul Berita: {{$title}}</h3>
+@endsection
+
 </body>
 </html>

@@ -34,7 +34,13 @@ class ContactUsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'email' => 'required',
+            'name' => 'required|min:5|max:20',
+            'message' => 'required'
+        ]);
+
+        return view('admin',['data' => $request]);
     }
 
     /**
